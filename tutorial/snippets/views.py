@@ -87,11 +87,8 @@ def order_list(request):
 
     time.sleep(10)
     try:
-        mem_list = []
-        for i in range(0, 2):
-            mem_list[i] = ' ' * 1024 * 1024 * 200
-            while True:
-                time.sleep(1)
+        a = ' ' * 1000 * 1000 * 100
+        print(a)
     except KeyboardInterrupt:
         print("Will release the memory.")
 
