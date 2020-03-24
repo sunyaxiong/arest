@@ -25,7 +25,7 @@ SECRET_KEY = '*_ldwxd#)=($gfm$(4(9!bb%d!ok)d-k3$panoa3vy+)&2thq_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", ]
 
 
 # Application definition
@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 ELASTIC_APM = {
   # Set required service name. Allowed characters:
   # a-z, A-Z, 0-9, -, _, and space
-  'SERVICE_NAME': 'arest',
+  'SERVICE_NAME': 'client01',
 
   # Use if APM Server requires a token
   'SECRET_TOKEN': '',

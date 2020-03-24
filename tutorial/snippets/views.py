@@ -85,6 +85,14 @@ def inventory_detail(request, pk):
 @api_view(['GET', 'POST'])
 def order_list(request):
 
-    time.sleep(40)
+    time.sleep(10)
+    try:
+        mem_list = []
+        for i in range(0, 2):
+            mem_list[i] = ' ' * 1024 * 1024 * 200
+            while True:
+                time.sleep(1)
+    except KeyboardInterrupt:
+        print("Will release the memory.")
 
     return Response(status=status.HTTP_404_NOT_FOUND)
