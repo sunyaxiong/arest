@@ -127,13 +127,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ELASTIC_APM = {
-  # Set required service name. Allowed characters:
-  # a-z, A-Z, 0-9, -, _, and space
-  'SERVICE_NAME': 'client01',
+    # Set required service name. Allowed characters:
+    # a-z, A-Z, 0-9, -, _, and space
+    'SERVICE_NAME': 'client01',
+    "DEBUG": True,
+    # Use if APM Server requires a token
+    'SECRET_TOKEN': '',
 
-  # Use if APM Server requires a token
-  'SECRET_TOKEN': '',
-
-  # Set custom APM Server URL (default: http://localhost:8200)
-  'SERVER_URL': 'http://192.168.152.170:8200',
+    # Set custom APM Server URL (default: http://localhost:8200)
+    'SERVER_URL': 'http://192.168.152.170:8200',
 }
