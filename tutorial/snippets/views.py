@@ -78,3 +78,9 @@ def inventory_detail(request, pk):
         }
 
         return Response(res)
+
+
+@api_view(['GET', 'POST'])
+def order_list(request):
+
+    return Response(status=status.HTTP_404_NOT_FOUND)

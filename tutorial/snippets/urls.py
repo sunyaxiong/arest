@@ -7,6 +7,8 @@ urlpatterns = [
     path('snippets/<int:pk>', views.snippet_detail),
     path('inventory', views.inventory_list),
     path('inventory/<int:pk>', views.inventory_detail),
+
+    path('orders', views.order_list),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
