@@ -46,6 +46,7 @@ MIDDLEWARE = [
     'elasticapm.contrib.django.middleware.TracingMiddleware',
     'elasticapm.contrib.django.middleware.ErrorIdMiddleware',
     'elasticapm.contrib.django.middleware.LogMiddleware',
+    'elasticapm.contrib.django.middleware.Catch404Middleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
