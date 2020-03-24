@@ -1,3 +1,5 @@
+import time
+
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -82,5 +84,7 @@ def inventory_detail(request, pk):
 
 @api_view(['GET', 'POST'])
 def order_list(request):
+
+    time.sleep(40)
 
     return Response(status=status.HTTP_404_NOT_FOUND)
