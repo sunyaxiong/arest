@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'snippets.apps.SnippetsConfig'
 ]
-
+import elasticapm.contrib.django.middleware
 MIDDLEWARE = [
     'elasticapm.contrib.django.middleware.TracingMiddleware',
+    'elasticapm.contrib.django.middleware.ErrorIdMiddleware',
+    'elasticapm.contrib.django.middleware.LogMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
