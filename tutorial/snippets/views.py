@@ -87,7 +87,7 @@ def order_list(request):
 
     time.sleep(10)
     try:
-        a = ' ' * 1000 * 1000 * 1000
+        a = ' ' * 1000 * 1000 * 50
         print(a)
     except KeyboardInterrupt:
         print("Will release the memory.")
