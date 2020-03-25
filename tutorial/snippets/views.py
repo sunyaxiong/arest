@@ -93,3 +93,22 @@ def order_list(request):
         print("Will release the memory.")
 
     return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['GET', 'POST'])
+def user_list(request):
+
+    time.sleep(40)
+
+    res = [
+        {
+            "id": "001",
+            "username": "zhangsan",
+        },
+        {
+            "id": "002",
+            "username": "lisi"
+        }
+    ]
+
+    return Response(res)
