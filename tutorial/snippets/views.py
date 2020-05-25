@@ -1,4 +1,5 @@
 import time
+import random
 
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -59,13 +60,30 @@ def inventory_list(request):
     :return:
     """
     if request.method == "GET":
-        res = [
-            {
-                "name": "Logstash",
-                "code": "0002",
-                "msg": "YES"
-            },
-        ]
+        if request.GET.get("name") == "Logstash":
+            res = [
+                {
+                    "name": "Logstash",
+                    "code": "0001",
+                    "msg": "YES"
+                },
+            ]
+        elif request.GET.get("name") == "beats":
+            res = [
+                {
+                    "name": "Auditbeat",
+                    "code": "0002",
+                    "msg": "YES"
+                },
+                {
+                    "name": "Metricbeat",
+                    "code": "0003",
+                    "msg": "YES"
+                },
+            ]
+        else:
+            res = []
+        time.sleep(10)
 
         return Response(res)
 
@@ -85,6 +103,8 @@ def inventory_detail(request, pk):
 @api_view(['GET', 'POST'])
 def order_list(request):
 
+    print(request)
+    print(request.method)
     time.sleep(10)
     try:
         a = ' ' * 1000 * 1000 * 1000
@@ -98,7 +118,7 @@ def order_list(request):
 @api_view(['GET', 'POST'])
 def user_list(request):
 
-    time.sleep(40)
+    time.sleep(10)
 
     res = [
         {
